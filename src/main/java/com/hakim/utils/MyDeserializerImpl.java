@@ -43,6 +43,13 @@ public class MyDeserializerImpl extends JsonDeserializer<Shop> {
     public static final String TOTAL_INCOME="total_income";
     public static final String TOTAL_COST="total_cost";
     public static final String WORKDAY="workday";
+    public static final String PROFIT = "profit";
+    public static final String SELL_HISTORY = "sell_history";
+    public static final String BUY_HISTORY = "buy_history";
+    public static final String HISTORY_AMOUNT = "amount";
+    public static final String HISTORY_DATE = "date";
+    public static final String HISTORY_PROFIT = "profit";
+    public static final String HISTORY_PERSON = "seller";
 
     public static final String GIVEN_SALARY="given_salary";
     public static final String SALARY_AMOUNT="salary_amount";
@@ -99,6 +106,8 @@ public class MyDeserializerImpl extends JsonDeserializer<Shop> {
         transaction.setTotalCost(node.get(TOTAL_COST).asInt());
         transaction.setTotalIncome(node.get(TOTAL_INCOME).asInt());
         transaction.setWorkday(node.get(WORKDAY).asText());
+        transaction.setProfit(node.get(PROFIT).asInt());
+        // deserialize buy and sell history list
 
         return transaction;
     }

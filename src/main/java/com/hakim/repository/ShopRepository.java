@@ -12,8 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class ShopRepository {
-    private  final File file = new File("D:\\java_code\\shopBilling\\src\\main\\java\\com\\hakim\\data.json");
-    //    private  final File file = new File(resource != null ? resource.toString().substring(6)+File.separator+"hakim"+File.separator+"data.json" : "");
+    private  final File file = new File("C:\\app\\data.json");
     private  final ObjectMapper mapper = new ObjectMapper();
     private final Shop shop;
     public ShopRepository() throws IOException {
@@ -75,5 +74,4 @@ public class ShopRepository {
         mapper.registerModule(module);
         mapper.writeValue(file, shop);
     }
-    
 }
